@@ -7,7 +7,8 @@ Phase|Start Date    |Proposed End Date|Accelerated End Date|Segment             
 1    |April 28,2014 |June 29, 2015    |April 22, 2015      |Park Lawn to Jarvis |1 lane closed per direction|
 2    |August 19,2015|October 24, 2016 |June 21, 2016       |Jameson to Strachan |1 lane closed per direction|
 
-Study Period: (chosen to control seasonality)
+Study Period: (chosen to control seasonality)  
+
 Phase|Road Name|Construction                  |Normal                        |
 -----|---------|------------------------------|------------------------------|
 1    |Gardiner |April 28,2014 - June 28, 2014 |April 22, 2015 - June 28, 2015|
@@ -20,7 +21,8 @@ Phase|Road Name|Construction                  |Normal                        |
 There are two sources of travel time data available: Bluetooth and Inrix. 
 In this case, bluetooth data is used for delay calculations because of its availability. At the point when this analysis is done, Inrix data is updated till end of June 2016.
 
-Segments under analysis:
+Segments under analysis:  
+
 Road     |Segment             |Direction|
 ---------|--------------------|---------|
 Gardiner |Grand - Dufferin    |EB,WB    |
@@ -31,7 +33,8 @@ Lakeshore|Grand - Ellis       |EB       |
 		 |Dufferin - Strachan |EB,WB    |
 		 |Strachan - Bay      |EB       |
 
-the headings are as follows:
+the headings are as follows:  
+
 segment_id|timestamp|travel_time|dow|
 ----------|---------|-----------|---|
 
@@ -41,7 +44,8 @@ travel time hourly profiles are constructed for both phases and for construction
 Dates where Gardiner/Lakeshore are closed for special events are taken out of consideration.
 
 ## Volume
-the headings are as follows:
+the headings are as follows:  
+
 arterycode|count_date|time_count|count|dow|
 ----------|----------|----------|-----|---|
 
