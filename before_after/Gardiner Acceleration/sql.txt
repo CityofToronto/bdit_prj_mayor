@@ -1,0 +1,18 @@
+Bluetooth:
+SELECT segment_id, time_int as Timestamp, travel_time, EXTRACT('dow' from time_int) as dow
+  FROM bluetooth.interval_data
+  WHERE segment_id in (40,41,42,43,44,45) and ((time_int >= '2014-04-22' and time_int <= '2014-06-28') or (time_int >= '2015-04-22' and time_int <= '2015-06-28') or (time_int >= '2015-08-17' and time_int <= '2015-09-30') or (time_int >= '2016-08-17' and time_int <= '2016-09-30'))
+
+
+Volume:
+SELECT arterycode, count_date, time_count, count, EXTRACT('dow' from count_date) as dow
+  FROM cot.volumes
+  WHERE arterycode in (3170,3193,23985,3186,3189,3187,3195,3194,3190,3171,3185,37507,37509,25987,3179,23992,3180,37508,37506,3191,25984,3168,23989,3169,3192,23988,23990) and ((count_date >= '2012-04-22' and count_date <= '2012-06-28'))
+
+Inrix:
+SELECT tmc, time_15_continuous, dt, avg_speed, length_m as length, s_id, EXTRACT('dow' from dt) as dow
+FROM inrix.agg_extract_hour JOIN inrix.ref_tmc USING (tmc)
+WHERE tmc in ('C09-04841', 'C09+04842', 'C09-07465', 'C09+04843', 'C09-04843', 'C09+04844', 'C09N04844', 'C09P04844', 'C09-04844', 'C09+04845', 'C09N04845', 'C09P04845', 'C09-04845', 'C09+04846') and ((dt >= '2014-04-22' and dt <= '2014-06-28') or (dt >= '2015-04-22' and dt <= '2015-06-28') or (dt >= '2015-08-17' and dt <= '2015-09-30') or (dt >= '2016-08-17' and dt <= '2016-09-30'))
+
+C09-04841, C09+04842, C09-07465, C09+04843, C09-04843, C09+04844, C09N04844, C09P04844, C09-04844, C09+04845, C09N04845, C09P04845, C09-04845, C09+04846
+'C09-04387', 'C09+04388','C09-04388', 'C09+04389','C09-04308','C09+04309','C09N04309','C09P04309','C09-04309','C09+04310','C09N04310','C09P04310'
